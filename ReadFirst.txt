@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------------------------------------
+Para empezar con un preyecto usando vite se debe:
+1.- npm init vite@latest
+2.- asignar nombre al proyecto
+3.- indicar que es React
+-------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------
+Una vez generado el proyecto:
+1.- Cambiarse a la carpeta del proyecto
+2.- npm install
+3.- npm run dev para ver que funcione corretamente
+-------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Para instalar tailwindCSS:
+1.- npm install -D tailwindcss@latest
+2.- npm install -D postcss@latest
+3.- npm install -D autoprefixer@latest
+4.- npx tailwindcss init -p (generar archivos postcss.config.js y tailwind.config.js)
+5.- Modificar el archivo tailwind.config.js: (eliminar los estilos que no se usen en todos los archivos jsx)
+
+    module.exports = {
+      purge: [".index.html", "./src/**/*.{jsx}"],
+      content: [],
+      theme: {
+        extend: {},
+      },
+      plugins: [],
+    }
+
+6.- Dentro del archivos index.css importar:
+    @import "tailwindcss/base";
+    @import "tailwindcss/components";
+    @import "tailwindcss/utilities";
+    esta es otra manera:
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+7.- Instalar la extensión de VS Code: Tailwind CSS IntelliSense
+8.- Lista la conguración.  Se resetearon los estilos en el browser
+-------------------------------------------------------------------------------------------------------------
+
+
+Instalar FontAwesome:
+1.- npm i --save @fortawesome/fontawesome-svg-core  @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
+2.- import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+3.- LLamar: <FontAwesomeIcon icon={faTrash}/>
