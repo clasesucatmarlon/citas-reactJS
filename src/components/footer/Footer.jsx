@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedinIn, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn, faGithubAlt, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
@@ -11,14 +11,33 @@ const Footer = () => {
                     - Medellín 2022
                 </h3>
                 <div className="flex justify-between w-2/12 p-4 ">
-                    <a href="" className="hover:text-indigo-700">
+                    <a 
+                        href="https://clasesucatmarlon.github.io/portafolioMG/" 
+                        className="hover:text-indigo-700"
+                        target="_blank"
+                        >
                         <FontAwesomeIcon className='px-4 text-2xl' icon={faLink} />
                     </a>
-                    <a href="" className="hover:text-indigo-700">
+                    <a 
+                        href="https://www.linkedin.com/in/marlonagarciam/" 
+                        className="hover:text-indigo-700"
+                        target="_blank"
+                        >
                         <FontAwesomeIcon className='px-4 text-2xl' icon={faLinkedinIn} />
                     </a>
-                    <a href="" className="hover:text-indigo-700">
+                    <a 
+                        href="https://github.com/clasesucatmarlon" 
+                        className="hover:text-indigo-700"
+                        target="_blank"
+                    >
                         <FontAwesomeIcon className='px-4 text-2xl' icon={faGithubAlt} />
+                    </a>
+                    <a 
+                        href="https://twitter.com/garciamarlon" 
+                        className="hover:text-indigo-700"
+                        target="_blank"
+                    >
+                        <FontAwesomeIcon className='px-4 text-2xl' icon={faTwitter} />
                     </a>
                 </div>
             </div>
