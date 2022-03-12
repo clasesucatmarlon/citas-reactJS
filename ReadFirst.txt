@@ -49,4 +49,9 @@ Instalar FontAwesome:
 1.- npm i --save @fortawesome/fontawesome-svg-core  @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
 2.- import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from '@fortawesome/free-brands-svg-icons';
 3.- LLamar: <FontAwesomeIcon icon={faTrash}/>
+
+
+URL: 
+https://www.digitalocean.com/community/tutorials/how-to-use-font-awesome-5-with-react-es
