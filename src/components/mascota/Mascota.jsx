@@ -29,7 +29,7 @@ const Mascota = ({ item, setObjetoMascota, eliminarPaciente }) => {
   };
 
   return (
-    <div className="border shadow-md md:w-full py-4 rounded-md mb-6 flex justify-around">
+    <div className="border shadow-md md:w-full rounded-md mb-10 flex justify-around">
       <div hidden={!show}>
         <div className="BoxModal shadow-xl rounded-md flex flex-col">
           <h3 className="text-white font-bold text-2xl mb-12 uppercase">
