@@ -10,7 +10,7 @@ const Footer = () => {
                     <span className='italic'>Marlon García</span>
                 </h3>
                 <h3>Medellín 2022</h3>
-                <div className="flex justify-between w-2/12 p-4 items-center">
+                <div className="flex justify-between p-4 items-center">
                     <a 
                         href="https://clasesucatmarlon.github.io/portafolioMG/" 
                         className="hover:text-indigo-700"
