@@ -4,13 +4,13 @@ import { faLinkedinIn, faGithubAlt, faTwitter } from '@fortawesome/free-brands-s
 
 const Footer = () => {
     return (
-        <div className='p-4 mt-12 border-t-4 border-gray-200'>
-            <div className='flex flex-col items-center' >
+        <div className='p-4 mt-12 border-t-4 border-gray-200 bg-red-500 md:w-full '>
+            <div className='flex flex-col items-center ' >
                 <h3>Diseño y desarrollo por {''}
-                    <span className='italic'>Marlon García</span>{''}
-                    - Medellín 2022
+                    <span className='italic'>Marlon García</span>
+                    <span className='italic'>Medellín 2022</span>
                 </h3>
-                <div className="flex justify-between w-2/12 p-4 ">
+                {/* <div className="flex justify-between w-2/12 p-4 items-center">
                     <a 
                         href="https://clasesucatmarlon.github.io/portafolioMG/" 
                         className="hover:text-indigo-700"
@@ -39,7 +39,7 @@ const Footer = () => {
                     >
                         <FontAwesomeIcon className='px-4 text-2xl' icon={faTwitter} />
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
 
