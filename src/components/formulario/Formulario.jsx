@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Error from "../helpers/Error";
 import LabelForm from "./LabelForm";
+import swal from 'sweetalert';
 
 
 const Formulario = ({ pacientes, setPacientes, objetoMascota, setObjetoMascota}) => {
@@ -28,6 +29,12 @@ const Formulario = ({ pacientes, setPacientes, objetoMascota, setObjetoMascota})
     // Validar formulario
     if ([mascota, propietario, email, fecha, sintomas].includes('')) {
       setError(true);
+      swal({
+        title: 'Error',
+        text: 'Todos los campos son obligatorios',
+        icon: 'error',
+        timer: 4000
+      })
       return;
     }
     setError(false);
@@ -47,10 +54,22 @@ const Formulario = ({ pacientes, setPacientes, objetoMascota, setObjetoMascota})
       const pacientesActualizados = pacientes.map( itemActualizado => itemActualizado.id === objetoMascota.id ? objetoPaciente : itemActualizado);
       setPacientes(pacientesActualizados);
       setObjetoMascota({})
+      swal({
+        title: 'Actualizaciòn de datos',
+        text: 'Los datos de la mascota se actualizaron correctamente',
+        icon: 'info',
+        timer: 4000
+      })
     } else {
         // Nuevo registro
         objetoPaciente.id = generarID();
         setPacientes([...pacientes, objetoPaciente]);
+        swal({
+          title: 'Agregar mascota',
+          text: 'La mascota se agregò correctamente',
+          icon: 'info',
+          timer: 4000
+        })
       }
 
     // Reiniciar formulario
@@ -68,7 +87,6 @@ const Formulario = ({ pacientes, setPacientes, objetoMascota, setObjetoMascota})
     return random + fecha;
   }
 
-
   return (
     <div className="md:w-1/2 lg:w-2/5 m-3">
       <h2 className="font-black text-3xl text-center ">
@@ -83,7 +101,7 @@ const Formulario = ({ pacientes, setPacientes, objetoMascota, setObjetoMascota})
         className="border shadow-md rounded-md py-10 px-5 flex flex-col mb-10"
         onSubmit={handleSubmit}
       >
-        { error && <Error mensaje="Todos los campos son obligatorios" /> }
+        
 
         <LabelForm htmlFor="mascota" textLabel="Nombre de la mascota:" />
         <input
