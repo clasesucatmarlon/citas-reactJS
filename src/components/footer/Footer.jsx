@@ -8,9 +8,9 @@ const Footer = () => {
             <div className='flex flex-col items-center ' >
                 <h3>Diseño y desarrollo por {''}
                     <span className='italic'>Marlon García</span>
-                    <span className='italic'>Medellín 2022</span>
                 </h3>
-                {/* <div className="flex justify-between w-2/12 p-4 items-center">
+                <h3>Medellín 2022</h3>
+                <div className="flex justify-between w-2/12 p-4 items-center">
                     <a 
                         href="https://clasesucatmarlon.github.io/portafolioMG/" 
                         className="hover:text-indigo-700"
@@ -39,7 +39,7 @@ const Footer = () => {
                     >
                         <FontAwesomeIcon className='px-4 text-2xl' icon={faTwitter} />
                     </a>
-                </div> */}
+                </div>
             </div>
         </div>
 
