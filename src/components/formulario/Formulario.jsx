@@ -55,7 +55,7 @@ const Formulario = ({ pacientes, setPacientes, objetoMascota, setObjetoMascota})
       setPacientes(pacientesActualizados);
       setObjetoMascota({})
       swal({
-        title: 'Actualizaciòn de datos',
+        title: 'Actualización de datos',
         text: 'Los datos de la mascota se actualizaron correctamente',
         icon: 'info',
         timer: 4000
@@ -66,7 +66,7 @@ const Formulario = ({ pacientes, setPacientes, objetoMascota, setObjetoMascota})
         setPacientes([...pacientes, objetoPaciente]);
         swal({
           title: 'Agregar mascota',
-          text: 'La mascota se agregò correctamente',
+          text: 'La mascota se agregó correctamente',
           icon: 'info',
           timer: 4000
         })
